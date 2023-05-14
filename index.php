@@ -1,0 +1,396 @@
+<?php
+require_once 'config/connect.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link href="css/main12.css"  rel="stylesheet">
+	<title>Детский Сад</title>
+	<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<nav>
+	<a href="#contacts1">
+	<div class='header-top'>
+		<div class='ul'>
+		<div class="container">
+			<div class='header-image'>
+               <img src="image\contacts.png" alt="">
+                    <div class='vniz'>
+                    <img src='image\vniz.png' alt="">
+                    </div>
+                      <div class='vniz2'>
+                      <img src='image\vniz.png' alt="">
+                      </div>  
+             </div>
+           </a>
+         </nav>
+             
+             <a href="#">
+		     <div class='login'>
+		     	<div class="login-text">
+		     		<small>ВХОД</small>
+                </div>
+            </div>
+            </a>
+        </div>
+		</div>
+	</div>
+	<div class="header-box">
+		<div class="logo">
+			<img class="logo1" src="image\logo.png" alt="">
+		</div>
+
+        <?php
+    
+    $main = mysqli_query($connect, "SELECT * FROM `main` ORDER BY id DESC");
+    $main = mysqli_fetch_all($main);
+
+    foreach ($main as $main) {
+        ?>
+
+
+
+		<div class="block-text">
+           
+
+			<div class="text1">
+			<?= $main[1]?>
+
+		    </div>
+
+		     <a class="inform1" href="off/update-main.php?id=<?= $main[0] ?>">Изменить</a>
+
+		    <div class="text3">
+		    <b><?= $main[2]?></b>
+
+		    </div>
+
+</div>
+
+
+
+		</div>
+		<div class="cont">
+		    <div class="contact-photo">
+				<img src="image\i.png" alt="">
+		    </div>
+
+            <div class="cont-text1">
+			<?= $main[3]?>
+		    </div>
+
+		    <div class="cont-numb">
+			<?= $main[4]?>
+		    </div>
+    </div>
+
+                <?php
+     
+    }
+?>
+
+    <header>
+         <nav>
+           <ul>
+                <li><a href="#">О НАС</a>
+                     <ul>
+                         <li><a href="off/общая информация.php">Общая информация</a></li>
+                         <li><a href="off/педагогический состав.php">Педагогический состав</a></li>
+                         <li><a href="off/контакты подразделения.php">Контакты подразделений</a></li>
+                         <li><a href="off/режим работы.php">Режим работы</a></li>
+                         <li><a href="off/новости.php">Новости</a></li>
+                     </ul>
+                </li>
+
+                <li><a href="#">РОДИТЕЛЯМ</a>
+                    <ul>
+                        <li><a href="">Алгоритм поступления </a></li>
+                        <li><a href="off/Свободные места в классах.php">Свободные места в классах</a></li>
+                        <li><a href="off/дошкольное образование.php">Дошкольное образование</a></li>
+                        <li><a href="off/все вопросы о питании.php">Все вопросы о питании</a></li>
+                        <li><a href="off/психологическая поддержка ребенка.php">Психологическая поддержка ребенка</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">УЧАЩИМСЯ</a>
+                    <ul>
+                        <li><a href="off/расписание, учебные периоды, каникулы.php">Расписание, учебные периоды, каникулы</a></li>
+                        <li><a href="off/олимпиады,конкурсы и конференции.php">Олимпиады, конкурсы и конференции</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">ПЕДАГОГАМ</a>
+                  <ul>
+                      <li><a href="off/вакансии.php">Вакансии
+                      </a></li>
+                      <li><a href="off/возможности мэш для педагогоов.php">Возможности МЭШ для педагогов</a></li>
+                      <li><a href="off/трудовые права работников.php">Трудовые права работников</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="off/дополнительное образование.php">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</a>
+                  <ul>
+                      <li><a href="off/поиск кружков и секци.php">Поиск кружков и секций</a></li>
+                  </ul>
+                </li>
+            </ul> 
+         </nav>
+     </header>
+     <div class="boxshadow1"></div>
+    <div class="osnova">
+
+    	
+    		
+       <div class="s2">
+        <div class="text-gran">
+           <div class="osnova-text">
+                    <?php
+    
+    $main = mysqli_query($connect, "SELECT * FROM `main` ORDER BY id DESC");
+    $main = mysqli_fetch_all($main);
+
+    foreach ($main as $main) {
+        ?>
+
+           	<span class="osnova-text1">
+           		Успех начинается здесь!
+           	</span>
+           	<span class="osnova-text2">
+           	    Челябинское образование – это качественный и прочный фундамент 
+           	    <br>знаний, современное и безопасное пространство, атмосфера творчестваи и<br> достижений.
+           	    <br>Добро пожаловать в мир новых открытий, увлекательных занятий, добрых наставников и верных друзей!</br>
+           </span>
+           </div>
+
+ </div>
+
+          <div class="osnova-box-cvet">
+
+
+          	<div class="osnova-text3">Уважаемые родители, приветствуем Вас в нашем  детском саду!
+          	</div>
+
+          	<h3 class="osnova-text4">Мы гордимся тем, что наш детский сад предлагает высококачественное образование и заботу для маленьких детей. Мы верим, что дети должны расти и развиваться в спокойной и любящей атмосфере.
+
+В нашем саду мы обучаем детей социальным и эмоциональным навыкам, а также помогаем им развивать креативность, логику и аналитические способности. Мы уделяем особое внимание развитию речи и литературному воспитанию, чтобы дети могли изучать языки и читать книги на очень ранней стадии своей жизни.
+
+Мы предлагаем широкий спектр развивающих занятий, таких как спортивные игры, творческие мастер-классы, занятия музыкой и танцами, а также занятия на свежем воздухе. Мы также организуем поездки и экскурсии, чтобы дети могли познакомиться с миром вокруг себя и расширить свой кругозор.
+
+Мы гарантируем, что ваш ребенок будет находиться в безопасном и защищенном окружении, с любящими и целеустремленными педагогами, которые будут заботиться о его здоровье, безопасности и счастье.
+
+Мы с нетерпением ждем возможности приветствовать вас и вашего ребенка в нашем детском саду, и дать ему опыт и знания, необходимые для успешного обучения в будущем.<p>
+           <b>Заведующий</b></p>Киселёв Артём Сергеевич
+
+         </div>
+        
+         <div class="osnova-box-photo">
+
+            </div>
+            </div>
+
+
+                         <?php
+     
+    }
+?>
+              	
+    </div>
+    </div>
+          	    
+    <div class="news">
+               <h2 class="news-button-text"><b>Новости</b></h2>
+        	<div class="news-button"></div>
+            <div class="news-table">
+            		<div class="news-table-box"></div>
+            	<div class="news-table-box-niz">
+            			
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+
+
+
+      <?php
+    
+    $news = mysqli_query($connect, "SELECT * FROM `news` ORDER BY id DESC");
+    $news = mysqli_fetch_all($news);
+
+    foreach ($news as $news) {
+        ?>
+
+
+
+
+      <div class="swiper-slide">
+        <a href="off/новости.php">
+      	<img class="swiper-image" src="image/<?= $news[4]?>.png">
+      	<div class="ten"></div>
+      <div class="swiper-text">
+           
+             <span class="swiper-text1"><?= $news[2] ?></span>
+             <span class="swiper-text2"><?= $news[1] ?></span>
+      </div>
+  </a>
+      </div>
+                  <?php
+     
+    }
+?>
+       
+
+      
+        </div>
+         <div class="swiper-pagination"></div>
+       </div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>  
+         </div>
+         </div>
+       </div>
+    </div>   
+
+
+
+
+
+
+
+    <div class="questions">
+        
+    	<div class="questions-button-text">Задайте свой вопрос</div>
+        
+
+    	  <div class="questions-button">
+          <div class='questions-button-podtext'>Если у вас есть вопросы или предложения, заполните все поля и нажмите "Отправить заявку". Наши работники с вам обязательно свяжуться.
+
+          </div>
+        </div>
+
+<div class="container12">
+                <div class="container3">
+  <div><form class="main__form"  action="http://kiselev/form.php" method="post" >
+          <div class="form1"> 
+					<p class="form-text">Имя<span class="required">*</span>: <br>
+                    <input class="form__input" type="text" placeholder="Ваше имя" name="name"size="0">
+					<p class="form-text">Почта<span class="required">*</span>:<br>
+                    <input class="form__input" type="text" placeholder="Электронная почта" name="email"><br>
+                    <br>
+					<span class="form-text">Телефон</span>
+					<span class="required">*</span>: <br>
+                    <input class="form__input" type="tel" placeholder="+7 (___) ___-__-__" name="phone">
+          </div> 
+
+                <div class="form-text">
+               	<br>
+					<span class="form-text">Текст вопроса</span>
+					<span class="required">*</span>:<br>
+                    <input class="form__input1" type="text" placeholder="Ваш комментарий" name="comment">
+				</div>
+                  <div class="radio">
+                        <input class="form__radio" type="radio" id="radio-1" name="radiobutton" value="radiobutton" >
+                        <label class="radio__label" for="radio-1">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных</label>
+                  </div>
+                </div>
+                    <button class="form__btn" action="submit">Отправить заявку</button>
+                </form>
+
+                </div>
+	  </div>
+  </div>
+          <div  id="map-test" class="geomaps">
+          	
+          </div>
+
+	<div class="contact">
+		<div class="contact-box">
+            <div class="s4">
+			<div class="contact-box-left">
+            
+				<h2 class="contact-box-left-text1">Наши контакты</h2>
+				
+					<div class="contact-box-left-text2">
+                        заведующий образовательным учреждением
+                        <h4><b>Григорьева Оксана Станиславовна</b></h4>
+                        <p>Тел.: +7(35146)3-95-43</p>
+                        <p>E-mail: ds21@snzadm.ru</p>
+                    </div>
+                    <div class="contact-box-left-text3">
+                     заместитель заведующего
+                        <h4><b>Зуева Любовь Валентиновна</b></h4>
+                        <p>Тел.: +7(35146)2-67-11</p>
+                        <p>E-mail: ds21@snzadm.ru</p>
+                    </div>
+				</div>
+			</div>
+<nav>
+	<article id="contacts1" ></article>
+</nav>
+
+           <div class="s4">
+			<div class="contact-box-right">
+                
+				<h2 class="contact-bot-rightZAG"><b>Контакты ДОНМ</b></h2>
+
+                <div class="s5">
+				<div class="contact-box-right1">
+					Начальник управления образования
+					<h4>Александрова Марина Вячеславовна</h4>
+          <p>Тел.: +7(351)469-27-89</p>
+          <p>E-mail: edu@snzadm.ru</p>
+				</div>
+
+				<div class="contact-box-right1">
+					Заместитель начальника Управления образования
+					<h4>Мухитдинов Артур Нуриевич</h4>
+          <p>Тел.: +7(351)462-21-20</p>
+          <p>E-mail: muhitdinovan@snzadm.ru</p>
+					
+				</div>
+
+				<div class="contact-box-right1">
+					старший инспектор
+					<h4>Силантьев Игорь Анатольевич</h4>
+          <p>Тел.: +7(351)469-21-05	</p>
+          <p>E-mail: -</p>
+					
+				</div>
+
+				<div class="contact-box-right1">
+					Специалист по комплектованию дошкольных групп
+					<h4>Рыжкина Светлана Андреевна</h4>
+          <p>Тел.: +7(351)469-27-38	</p>
+          <p>E-mail: -</p>
+					</div>
+				</div>
+			
+        </div>
+        </div>
+		</div>
+	</div>
+	
+		<div class="footer">	
+		<div class="footer-zona">
+			<div class="footer-zona1">
+			<a href="https://edusnz.educhel.ru"><p>2023 © Департамент образования и науки города Снежинска</p><a>
+		</div>
+	</div>
+    </div>  
+<script src="https://api-maps.yandex.ru/2.1/?apikey=f29cf3d4-2685-4ba9-acff-094122c2a0ef&lang=ru_RU"></script>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
